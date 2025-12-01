@@ -45,7 +45,7 @@
         /* Container do Vídeo (Responsivo 16:9) */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; 
+            padding-bottom: 56.25%; /* Proporção 16:9 para <iframe> */
             height: 0;
             overflow: hidden;
             background: #222; 
@@ -64,40 +64,13 @@
             height: 100%;
             border: none;
         }
-        
-        /* ESTILO DO BOTÃO DE WHATSAPP */
-        .cta-button {
-            display: none; /* Inicia oculto e será mostrado pelo JavaScript */
-            padding: 20px 40px;
-            background: #4CAF50; /* Verde WhatsApp */
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            margin-top: 20px;
-            animation: pulse 1.5s infinite;
-        }
-
-        .cta-button:hover {
-            background: #43A047;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
-        }
 
         @media (max-width: 600px) {
             .page-title {
                 font-size: 24px;
+            }
+            .page-subtitle {
+                font-size: 16px;
             }
             .page-container {
                 margin: 20px auto;
@@ -122,41 +95,10 @@
                 height="100%" 
                 fetchpriority="high">
         </iframe>
+        
     </div>
-
-    <a href="[SEU_LINK_DE_CONVITE_DO_WHATSAPP]" target="_blank" class="cta-button" id="whatsapp-button">
-        QUERO ENTRAR NO GRUPO VIP OPM AGORA!
-    </a>
     
 </div>
-
-<script>
-    // ----------------------------------------------------
-    // 🎯 Configuração do Atraso: 92 segundos (1m 32s)
-    // O tempo é contado a partir do carregamento da página.
-    const tempoAtrasoEmMilissegundos = 92000; 
-    // ----------------------------------------------------
-
-    const botaoWhatsapp = document.getElementById('whatsapp-button');
-
-    // Função para mostrar o botão
-    function mostrarBotaoWhatsApp() {
-        if (botaoWhatsapp) {
-            botaoWhatsapp.style.display = 'inline-block';
-            console.log('Botão do WhatsApp exibido após delay de 92s.');
-            
-            // Opcional: Remover o subtítulo para limpar a página após o delay
-            const subtitulo = document.querySelector('.page-subtitle');
-            if (subtitulo) {
-                subtitulo.style.display = 'none';
-            }
-        }
-    }
-
-    // Inicializa o temporizador para exibir o botão
-    setTimeout(mostrarBotaoWhatsApp, tempoAtrasoEmMilissegundos);
-    
-</script>
 
 </body>
 </html>
