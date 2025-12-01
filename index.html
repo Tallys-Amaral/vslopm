@@ -86,4 +86,77 @@
         .cta-button:hover {
             background: #43A047;
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 600px) {
+            .page-title {
+                font-size: 24px;
+            }
+            .page-container {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    
+    <h1 class="page-title">Assista o vídeo exclusivo da OPM e Garanta sua Vaga na Aula Grátis.</h1>
+    <p class="page-subtitle">O botão de acesso ao Grupo VIP será liberado durante o vídeo.</p>
+
+    <div class="video-container">
+        <iframe id="panda-7a136d96-8ced-46af-b5e4-1fd02ac7bead" 
+                src="https://player-vz-d2f57e7e-58a.tv.pandavideo.com.br/embed/?v=7a136d96-8ced-46af-b5e4-1fd02ac7bead" 
+                style="border:none;" 
+                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
+                allowfullscreen=true 
+                width="100%" 
+                height="100%" 
+                fetchpriority="high">
+        </iframe>
+    </div>
+
+    <a href="[SEU_LINK_DE_CONVITE_DO_WHATSAPP]" target="_blank" class="cta-button" id="whatsapp-button">
+        QUERO ENTRAR NO GRUPO VIP OPM AGORA!
+    </a>
+    
+</div>
+
+<script>
+    // ----------------------------------------------------
+    // 🎯 Configuração do Atraso: 92 segundos (1m 32s)
+    // O tempo é contado a partir do carregamento da página.
+    const tempoAtrasoEmMilissegundos = 92000; 
+    // ----------------------------------------------------
+
+    const botaoWhatsapp = document.getElementById('whatsapp-button');
+
+    // Função para mostrar o botão
+    function mostrarBotaoWhatsApp() {
+        if (botaoWhatsapp) {
+            botaoWhatsapp.style.display = 'inline-block';
+            console.log('Botão do WhatsApp exibido após delay de 92s.');
+            
+            // Opcional: Remover o subtítulo para limpar a página após o delay
+            const subtitulo = document.querySelector('.page-subtitle');
+            if (subtitulo) {
+                subtitulo.style.display = 'none';
+            }
+        }
+    }
+
+    // Inicializa o temporizador para exibir o botão
+    setTimeout(mostrarBotaoWhatsApp, tempoAtrasoEmMilissegundos);
+    
+</script>
+
+</body>
+</html>
