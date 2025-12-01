@@ -45,7 +45,7 @@
         /* Container do Vídeo (Responsivo 16:9) */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Proporção 16:9 para <iframe> */
+            padding-bottom: 56.25%; 
             height: 0;
             overflow: hidden;
             background: #222; 
@@ -64,41 +64,26 @@
             height: 100%;
             border: none;
         }
-
-        @media (max-width: 600px) {
-            .page-title {
-                font-size: 24px;
-            }
-            .page-subtitle {
-                font-size: 16px;
-            }
-            .page-container {
-                margin: 20px auto;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<div class="page-container">
-    
-    <h1 class="page-title">Assista o vídeo exclusivo da OPM e Garanta sua Vaga na Aula Grátis.</h1>
-    <p class="page-subtitle">O botão de acesso ao Grupo VIP será liberado durante o vídeo.</p>
-
-    <div class="video-container">
-        <iframe id="panda-7a136d96-8ced-46af-b5e4-1fd02ac7bead" 
-                src="https://player-vz-d2f57e7e-58a.tv.pandavideo.com.br/embed/?v=7a136d96-8ced-46af-b5e4-1fd02ac7bead" 
-                style="border:none;" 
-                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
-                allowfullscreen=true 
-                width="100%" 
-                height="100%" 
-                fetchpriority="high">
-        </iframe>
         
-    </div>
-    
-</div>
+        /* ESTILO DO BOTÃO DE WHATSAPP */
+        .cta-button {
+            display: none; /* Inicia oculto e será mostrado pelo JavaScript */
+            padding: 20px 40px;
+            background: #4CAF50; /* Verde WhatsApp */
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            animation: pulse 1.5s infinite;
+        }
 
-</body>
-</html>
+        .cta-button:hover {
+            background: #43A047;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.
